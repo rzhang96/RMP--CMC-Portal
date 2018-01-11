@@ -1,0 +1,23 @@
+{
+  "name": "CMC Portal Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Test",
+  "content_scripts": [
+    {
+      "matches": ["*://portal.claremontmckenna.edu/ICS/Course_Schedule/"],
+      "js": ["main.js"],
+      "css": ["main.css"],
+      "html": ["main.html"]
+    }
+  ],
+  "permissions":
+  [
+    "http://www.ratemyprofessors.com/*",
+    "tabs"
+  ],
+  "background": {
+        "scripts": ["prof2.js"],
+        "persistent": false
+  }
+}
